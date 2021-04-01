@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML_Table</title>
+    <style>
+        .table{
+            border: 1px solid black;
+        }
+        #table{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <table id="table">
+
+        <tr>
+            <th class="table">First Name</th>
+            <th class="table">Last Name</th>
+            <th class="table">Full Name</th>
+        </tr>
+        
+            {% for user in table_users %}
+            <tr>
+                <td class="table"> {{ user['first_name'] }}</td>
+                <td class="table"> {{ user['last_name'] }} </td>
+                <td class="table"> {{ user['first_name']}} {{ user['last_name'] }}</td>
+            </tr>
+            {% endfor %}
+
+    </table>
+
+</body>
+</html>
